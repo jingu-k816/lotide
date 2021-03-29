@@ -13,5 +13,3 @@ assertEqual(1, 1);
 assertEqual("jingu", "jingu");
 assertEqual("Jingu", "JINGU");
 assertEqual(1, 3);
-
-//test
