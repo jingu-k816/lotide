@@ -19,19 +19,19 @@ const eqArrays = function(firstArray, secondArray) {
   return true;
 };
 
-const without = function(sourceArray, itemsToRemove){
+const without = function(sourceArray, itemsToRemove) {
   const result = [];
-  for(let i =0; i < sourceArray.length; i++){
-    if(!itemsToRemove.includes(sourceArray[i])){
+  for (let i = 0; i < sourceArray.length; i++) {
+    if (!itemsToRemove.includes(sourceArray[i])) {
       result.push(sourceArray[i]);
     }
 
   }
   return result;
-}
+};
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 
 // const words = ["hello", "world", "lighthouse"];
 // without(words, ["lighthouse"]); // no need to capture return value for this test case

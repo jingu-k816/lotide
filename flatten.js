@@ -19,18 +19,18 @@ const assertArraysEqual = function(firstArray, secondArray) {
   }
 };
 
-const flatten = function (elementsOfNestedArray){
+const flatten = function(elementsOfNestedArray) {
   const flattenedArray = [];
-  for(let i = 0; i < elementsOfNestedArray.length; i++){
+  for (let i = 0; i < elementsOfNestedArray.length; i++) {
     const currentElement = elementsOfNestedArray[i];
-    if(!Array.isArray(currentElement)){
+    if (!Array.isArray(currentElement)) {
       flattenedArray.push(currentElement);
     }
-    for(let j = 0; j < currentElement.length; j++){
+    for (let j = 0; j < currentElement.length; j++) {
       flattenedArray.push(currentElement[j]);
     }
   }
   console.log(flattenedArray);
-}
+};
 
-flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
+flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
