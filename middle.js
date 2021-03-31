@@ -19,27 +19,27 @@ const assertArraysEqual = function(firstArray, secondArray) {
   }
 };
 
-const middle = function(arrayToFindMiddle){
-  const midIndex = arrayToFindMiddle[Math.floor(arrayToFindMiddle.length /2)];
+const middle = function(arrayToFindMiddle) {
+  const midIndex = arrayToFindMiddle[Math.floor(arrayToFindMiddle.length / 2)];
   const midValue = [];
-  if(arrayToFindMiddle.length <= 2){
+  if (arrayToFindMiddle.length <= 2) {
     return midValue;
   }
 
-    if(arrayToFindMiddle.length % 2 ===0){
-      midValue.push(midIndex - 1);
-      midValue.push(midIndex);
-    }else{
-      midValue.push(midIndex);
-    }
+  if (arrayToFindMiddle.length % 2 === 0) {
+    midValue.push(midIndex - 1);
+    midValue.push(midIndex);
+  } else {
+    midValue.push(midIndex);
+  }
 
   return midValue;
-}
+};
 //TEST CODE
 
-middle([1]) // => []
-middle([1, 2]) // => []
-middle([1, 2, 3, 4]) // => [2, 3]
+middle([1]); // => []
+middle([1, 2]); // => []
+middle([1, 2, 3, 4]); // => [2, 3]
 //console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
 
 assertArraysEqual(middle([1,2,3,4,5,6]), [3,4]);
